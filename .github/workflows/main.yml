@@ -58,5 +58,5 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             docker pull lanaremenyuk/infra_actions
-            docker stop $(sudo docker ps -a -q)
+            docker stop $(docker ps -a -q)
             docker run --rm -d -p 5000:5000 lanaremenyuk/infra_actions
